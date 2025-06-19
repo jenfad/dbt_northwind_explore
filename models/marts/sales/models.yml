@@ -4,12 +4,16 @@ models:
   - name: customer_orders
     columns:
       - name: customer_id
+        tests:
+          - not_null
         meta:
           dimension:
             type: number
             label: 'Customer ID'
             description: 'The unique identifier for a customer.'
       - name: company_name
+        tests:
+          - not_null
         meta:
           dimension:
             type: string
@@ -31,12 +35,16 @@ models:
   - name: customer_segmentation
     columns:
       - name: customer_id
+        tests: 
+          - not_null
         meta:
           dimension:
             type: number
             label: 'Customer ID'
             description: 'The unique identifier for a customer.'
       - name: company_name
+        tests:
+          - not_null
         meta:
           dimension:
             type: string
@@ -64,6 +72,8 @@ models:
   - name: product_sales
     columns:
       - name: product_name
+        tests: 
+          - not_null
         meta:
           dimension:
             type: string
